@@ -6,12 +6,12 @@ public class CharacterCount {
         StringBuilder result = new StringBuilder();
         int count = 1;
 
-        for (int i = 0; i < input.length(); i++) {
+        for (int index = 0; index < input.length(); index++) {
 
-            if (i < input.length() - 1 && input.charAt(i) == input.charAt(i + 1)) {
+            if (index < input.length() - 1 && input.charAt(index) == input.charAt(index + 1)) {
                 count++;
             } else {
-                result.append(input.charAt(i)).append(count);
+                result.append(input.charAt(index)).append(count);
                 count = 1;
             }
         }
