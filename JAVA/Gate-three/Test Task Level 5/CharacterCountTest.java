@@ -10,7 +10,7 @@ public class CharacterCountTest {
 
         assertEquals(expected, CharacterCount.countCharacters(input));
     }
-
+    
     @Test
     void testSingleCharacter() {
         assertEquals("a1", CharacterCount.countCharacters("a"));
