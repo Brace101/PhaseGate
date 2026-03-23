@@ -33,7 +33,7 @@ public class SimpleArithmeticApp {
 
         for (int index = 1; index <= totalQuestions; index++) {
         
-        int firstNumber = random.nextInt(50); 
+        int firstNumber = random.nextInt(100); 
         int secondNumber = random.nextInt(50);
         int correctAnswer = firstNumber - secondNumber;
                       
