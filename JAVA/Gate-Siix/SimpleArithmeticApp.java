@@ -13,10 +13,14 @@
 
 import java.util.Random;
 import java.util.Scanner;
+import java.time.LocalTime;
+import java.util.Date;
 
 public class SimpleArithmeticApp {
     public static void main(String[] args) {
-
+        
+        Date now = new Date();
+        LocalTime currentTime = LocalTime.now();
         Scanner input = new Scanner(System.in);
         Random random = new Random();
 
@@ -24,7 +28,7 @@ public class SimpleArithmeticApp {
         int score = 0;
         boolean isCorrect = false;
     
-        System.out.println("Hi, KIndly enter your name");
+        System.out.println("Hi, Kindly enter your name");
         String userName = input.nextLine();
 
         System.out.println("Hello Dear " + userName + " You're welcome to Simple Arithmetic Game App" + "\n");
@@ -61,8 +65,12 @@ public class SimpleArithmeticApp {
         }
         
         }
-        System.out.println("Your score: " + score + " out of " + totalQuestions + "\n");
+        System.out.println(now);
+        System.out.println("Current time: " + currentTime);
+        System.out.println("Your score is: " + score + " out of " + totalQuestions + "\n");
         System.out.println("GAME-OVER!!!");
 
 }
     }
+   
+
