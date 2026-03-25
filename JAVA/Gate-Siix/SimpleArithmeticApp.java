@@ -27,18 +27,39 @@ public class SimpleArithmeticApp {
         int totalQuestions = 10;
         int score = 0;
         boolean isCorrect = false;
+
+        System.out.println("LOADING...............................................");
     
-        System.out.println("Hi, Kindly enter your name");
+        System.out.println("\t" + "\t" + "Hello, Kindly enter your name" + "\n");
         String userName = input.nextLine();
 
-        System.out.println("Hello Dear " + userName + " You're welcome to Simple Arithmetic Game App" + "\n");
-        System.out.println("Dear " + userName + " Kindly note, you have 10 questions to answer below, you are entitle to just 2 attempt per question" + "\n");
-        System.out.println("Wish you GoodLuck as you play the game " + userName + "!!!" + "\n");
+        System.out.println("\t" + "\t" + "Hello Dear " + userName + " You're welcome to Semi-Colon Brain-Teaser Game App" + "\n");
+        System.out.println("\t" + "\t" + "Dear " + userName + " Kindly note, you have 10 questions to answer below, you are entitle to just 2 attempt per question" + "\n");
+        System.out.println("\t" + "\t" + "Wish you GoodLuck as you play the game " + userName + "!!!" + "\n");
 
+        System.out.println("\t" + "Press Ok To Start The Game!!!" + "\n");
+        String userResponse = input.nextLine();
+
+        if (userResponse.equalsIgnoreCase("Ok")) {
+        System.out.println("Game Starting..." + "\n");
+        } else {
+        System.out.println("\t" + "Invalid input. Please type 'Ok' to start." + "\n");
+        userResponse = input.nextLine();
+        System.out.println("Game Starting..." + "\n");
+        }
+        
         for (int index = 1; index <= totalQuestions; index++) {
         
-        int firstNumber = random.nextInt(100); 
-        int secondNumber = random.nextInt(50);
+        int firstNumber = random.nextInt(100)+1; 
+        int secondNumber = random.nextInt(50)+1;
+        
+        if (firstNumber < secondNumber) {
+        int temp = firstNumber;
+        firstNumber = secondNumber;
+        secondNumber = temp;
+
+        }
+
         int correctAnswer = firstNumber - secondNumber;
                       
         System.out.println("Question " + index + ": " + firstNumber + " - " + secondNumber);
@@ -49,26 +70,28 @@ public class SimpleArithmeticApp {
         int userAnswer = input.nextInt();
 
         if (userAnswer == correctAnswer) {
-        System.out.println("Correct!");
+        System.out.println("Correct!" + "\n");
         score++;
         isCorrect = true;
         break;
 
         } else {
         if (attempt == 1) {
-        System.out.println("You've inputed a wrong answer, kindly try again");
+        System.out.println("\t" + "\t" + "Dear " + userName + " You've inputed a wrong answer, kindly try again" + "\n");
+        }
         if (attempt == 2) {
-        System.out.println("Still a wrong answer, The correct answer is " + correctAnswer);
+        System.out.println("\t" + "\t" + "Dear " + userName + " Still a wrong answer, The correct answer is " + correctAnswer + "\n");
         }
-        }
+        
         }
         }
         
         }
-        System.out.println(now);
-        System.out.println("Current time: " + currentTime);
-        System.out.println("Your score is: " + score + " out of " + totalQuestions + "\n");
-        System.out.println("GAME-OVER!!!");
+        System.out.println("\t" + "\t" + now + "\n");
+        System.out.println("\t" + "\t" + "Current time: " + currentTime + "\n");
+        System.out.println("\t" + "\t" + "Dear " + userName + " You have successfully come to the end of Semi-Coln Brain-Teaser Game" + "\n");
+        System.out.println("\t" + "\t" + "Your score is: " + score + " out of " + totalQuestions + " Questions" + "\n");
+        System.out.println("\t" + "\t" + "GAME-OVER!!!");
 
 }
     }

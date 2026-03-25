@@ -6,18 +6,18 @@ import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 public class ParkingSlotTest{
 
-//    @Test
-//    public void testAllSlotsEmptyOnCreation(){      
-//            
-//        int[] actual = ParkingSlot.createParkingLot(20);
-//
-//        assertEquals(20, actual.length);
-//
-//        int[] expected = new int[20];
-// 
-//        assertArrayEquals(expected, actual);  
-//    }
-//
+    @Test
+    public void testAllSlotsEmptyOnCreation(){      
+            
+        int[] actual = ParkingSlot.createParkingLot(20);
+
+        assertEquals(20, actual.length);
+
+        int[] expected = new int[20];
+ 
+        assertArrayEquals(expected, actual);  
+    }
+
     @Test
     public void testCarParkAutomatically() {
 
